@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetti degli Studenti</title>
+    <title>Prof Bernardis</title>
     <!-- Link a Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -32,20 +32,35 @@
         <!-- Le carte verranno generate dinamicamente qui -->
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2024 Progetti in Corso - Università XYZ</p>
-    </footer>
 
     <!-- Script per generare le carte con JavaScript -->
     <script>
         // Dati dei progetti (puoi aggiungere altri progetti con lo stesso formato)
         const projects = [];
-        for (let i = 1; i <= 100; i++) {
+        let progetti = [
+            {
+                titolo: "Magazzino TDP",
+                descrizione: "Gestiamo il magazzino TDP",
+                link: "http://magazzinoTDP.infinityfreeapp.com"
+            },
+            {
+                titolo: "PatchPulse",
+                descrizione: "Sicurezza informatica",
+                link: "http://mrtc.duckdns.org/PatchPulse/html/homePage.php"
+            },
+            {
+                titolo: "Torneo Scolastico E-Sports",
+                descrizione: "Brawl Stars",
+                link: "http://torneo.infinityfreeapp.com/"
+            }
+        ]
+
+        for (let i = 0; i < progetti.length; i++) {
+
             projects.push({
-                title: `Progetto ${i}`,
-                description: `Descrizione del progetto ${i}`,
-                link: `https://www.example.com/project${i}`
+                title: `Progetto ${progetti[i]["titolo"]}`,
+                description: `Descrizione del progetto: ${progetti[i].descrizione}`,
+                link: `${progetti[i]["link"]}`
             });
         }
 
